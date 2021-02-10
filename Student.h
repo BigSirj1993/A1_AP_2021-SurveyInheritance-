@@ -14,43 +14,53 @@ public:
 	// Default Constructor
 	Student();
 
+	virtual void createRandomStudent();
+
 	//Overloaded Constructor
 	Student(int, int, int);
 
 
+	
+
 	//Accessor Function
-	int getCollege() const;
-	int getProgramName() const;
-	int getCurrentSemester() const;
+	//string getCollege() const;
+	//string getProgramName() const;
+	//int getCurrentSemester() const;
 	//int getStreamingService() const;
 
 
 	//Mutator Function
-	void setCollege(int);
-	void setProgramName(int);
+	void setCollege(string);
+	void setProgramName(string);
 	void setCurrentSemester(int);
+	void setIsGamingStudent(bool nIsGamingStudent);
+	void setIsNotGamingStudent(bool nIsNotGamingStudent);
+
 	//void setSteamingService(int);
 
 	//Destructor
 	~Student();
 
 
-	int getCollege() const; // Should Return College
-	int getProgramName() const; // Should Return Program Name
-	int getCurrentSemeter() const; // Should Return Current Semetest
+	//Accessor Function
+	bool getIsGamingStudent();
+	bool getIsNotGamingStudent();
+	string getCollege() const; // Should Return College
+	string getProgramName() const; // Should Return Program Name
+	int getCurrentSemester() const; // Should Return Current Semetest
 	//int getStreamingService() const;
 
-	void printInfo() const; // Should print info of College, Program Name And Semester
+	virtual void printInfo() const; // Should print info of College, Program Name And Semester
 
 private:
 	//Member Variables
-	int college;
-	int programName;
+	string college;
+	string programName;
 	int currentSemester;
+	bool isGamingStudent;
+	bool isNotGamingStudent;
 	//int streamingService;
 
 
 };
-
-
 
