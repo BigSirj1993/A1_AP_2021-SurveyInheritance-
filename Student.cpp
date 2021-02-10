@@ -1,13 +1,23 @@
 #include "Student.h"
 
 
+
 //Default Constructor
 Student::Student()
 {
 	
-	college = 0;
-	programName = 0;
+	college = "";
+	programName = "";
 	currentSemester = 0;
+}
+
+void Student::createRandomStudent()
+{
+	setName("Nick");
+	setAge(27);
+	setCollege("George Brown");
+	setProgramName("Video Game Programming");
+	setCurrentSemester(2);
 }
 
 
@@ -21,12 +31,12 @@ Student::Student(int newCollege, int newprogramName, int newcurrentSemester)
 
 
 //Accessor Function
-int Student::getCollege() const
+string Student::getCollege() const
 {
 	return college;
 }
 
-int Student::getProgramName() const
+string Student::getProgramName() const
 {
 	return programName;
 }
@@ -38,12 +48,12 @@ int Student::getCurrentSemester() const
 
 
 //Mutator Function
-void Student::setCollege(int newCollege)
+void Student::setCollege(string newCollege)
 {
 	college = newCollege;
 }
 
-void Student::setProgramName(int newProgramName)
+void Student::setProgramName(string newProgramName)
 {
 	college = newProgramName;
 }
@@ -53,6 +63,16 @@ void Student::setCurrentSemester(int newcurrentSemester)
 	currentSemester = newcurrentSemester;
 }
 
+void Student::setIsGamingStudent(bool nIsGamingStudent)
+{
+	isGamingStudent = nIsGamingStudent;
+}
+
+void Student::setIsNotGamingStudent(bool nIsNotGamingStudent)
+{
+	isNotGamingStudent = nIsNotGamingStudent;
+}
+
 
 //Destructor
 Student::~Student()
@@ -60,27 +80,19 @@ Student::~Student()
 
 }
 
-
-
-
-int Student::getCollege() const
+bool Student::getIsGamingStudent()
 {
-	return college;
+	if(isGamingStudent == '1')
+	return true;
+}
+
+bool Student::getIsNotGamingStudent()
+{
+	if(isNotGamingStudent == '0')
+	return false;
 }
 
 
-
-int Student::getProgramName() const
-{
-	return programName;
-
-} 
-
-
-int Student::getCurrentSemester() const
-{
-	return currentSemester;
-}
 
 void Student::printInfo() const
 {
@@ -89,3 +101,5 @@ void Student::printInfo() const
 	cout << endl << "Program Name: " << getProgramName() << endl;
 	cout << endl << "Current Semester: " << getCurrentSemester() << endl;
 }
+
+
