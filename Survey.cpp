@@ -25,8 +25,9 @@ void Survey::process()
 	
 }
 
-void Survey::addStudent()
+void Survey::addStudent(int _AddStudent)
 {
-
+	Student classroom;
+	classroom.createRandomStudent();
+	studentArray[_AddStudent] = classroom;
 }
-
