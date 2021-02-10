@@ -42,29 +42,28 @@ int main()
 	cout << myStudent.getProgramName() << endl;
 	cout << myStudent.getCurrentSemester() << endl;
 
-	// Mutating info in mySurvey
-	mySurvey.setName("Nick");
-	mySurvey.setAge('27');
-	mySurvey.setCollege("George Brown");
-	mySurvey.setProgramName("");
-	mySurvey.setCurrentSemester(2);
 
-	//Get info again(Getter)
-	cout << mySurvey.getName("Nick") << endl;
-	cout << mySurvey.getAge('27') << endl;
-	cout << mySurvey.getCollege("George Brown") << endl;
-	cout << mySurvey.getProgramName("") << endl;
-	cout << mySurvey.getCurrentSemester('2') << endl;
 
-	/*for (int i = 0;i < 500; i++)
+
+	for (int i = 0;i < 500; i++)
 	{
-		if (myStudent)
-		{
+		mySurvey.addStudent(i);
+	}
 
-		
+	for (int i = 0; i < 500; i++)
+	{
+		//mySurvey.studentArray[i].getIsGamingStudent(); 
+		//mySurvey.studentArray[i].getIsNotGamingStudent();
+		if (mySurvey.studentArray[i].getIsGamingStudent())
+		{
+			cout << "Thank you for taking my quiz, Gamer." << endl;
+		}
+		else if(mySurvey.studentArray[i].getIsNotGamingStudent())
+		{
+			cout << "Thank you for taking my quiz, Non Gamer." << endl;
 		}
 
-	}*/
+	}
 
 
 	system("pause");
