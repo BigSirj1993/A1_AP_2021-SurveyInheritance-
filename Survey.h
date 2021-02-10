@@ -22,32 +22,10 @@ public:
 	int totalNumberOfGamingHours;
 	int averageNumberOfGamingHours;
 	string mostPreferedService;
-
-	void getName(string);
-	void getAge(int);
-	void getCollege(string);
-	void getProgramName(string);
-	void getCurrentSemester(int);
-	void getIsGamingStudent(bool nIsGamingStudent);
-	void getIsNotGamingStudent(bool nIsNotGamingStudent);
-
 	
 	void process();
-	void addStudent();
-	void setName(string);
-	void setAge(int);
-	void setCollege(string);
-	void setProgramName(string);
-	void setCurrentSemester(int);
-	void setIsGamingStudent(bool nIsGamingStudent);
-	void setIsNotGamingStudent(bool nIsNotGamingStudent);
-
-
+	void addStudent(int _AddStudent);
+	
+	
 
 };
-
-
-
-
-#endif // _SURVEY_H_
-
