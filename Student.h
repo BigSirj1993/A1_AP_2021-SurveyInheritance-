@@ -17,7 +17,7 @@ public:
 	virtual void createRandomStudent();
 
 	//Overloaded Constructor
-	Student(int, int, int);
+	Student(string, string, int);
 
 
 	
@@ -63,4 +63,7 @@ private:
 
 
 };
+
+
+
 
