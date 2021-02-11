@@ -11,7 +11,7 @@ using namespace std;
 GamingStudent::GamingStudent()
 {
 
-	gamingDevice = 0;
+	gamingDevice = "";
 	hoursOfGameFun = 0;
 }
 
@@ -23,61 +23,22 @@ GamingStudent::GamingStudent(int newGamingDevice, int newHoursOfGameFun)
 	hoursOfGameFun = newHoursOfGameFun;
 }
 
-
-//Accessor Function
-int GamingStudent::getGamingDevice() const
+void GamingStudent::createRandomStudent()
 {
-	return gamingDevice;
-}
-
-int GamingStudent::getHoursOfGameFun() const
-{
-	return hoursOfGameFun;
-}
-
-
-//Mutator Function
-void GamingStudent::setGamingDevice(int newGamingDevice)
-{
-	gamingDevice = newGamingDevice;
-}
-
-void GamingStudent::setHoursOfGameFun(int newHoursOfGameFun)
-{
-	hoursOfGameFun = newHoursOfGameFun;
-}
-
-
-
-
-//Destructor
-GamingStudent::~GamingStudent()
-{
-
-}
-
-
-int GamingStudent::getGamingDevice() const
-{
-	return gamingDevice;
-}
-
-
-
-int GamingStudent::getHoursOfGameFun() const
-{
-	return hoursOfGameFun;
-
-}
-
-
-
-void GamingStudent::printInfo() const
-{
-	cout << endl << "Name: " << getName() << endl;
-	cout << endl << "Age: " << getAge() << endl;
-	cout << endl << "Gaming Device: " << getGamingDevice() << endl;
-	cout << endl << "Hours of Fun: " << getHoursOfGameFun() << endl;
-	
+	setName("");
+	setAge(18 + rand() % 27);
+	setCollege("");
+	setProgramName("");
+	setCurrentSemester(1 + rand() % 6);
+	int randomService = rand() % 2;
+	switch (randomService)
+	{
+	case 0:
+		setGamingDevice("PlayStation");
+		break;
+	case 1:
+		setGamingDevice("Xbox");
+		break;
+	}
 
 }
