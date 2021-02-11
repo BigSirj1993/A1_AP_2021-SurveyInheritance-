@@ -9,14 +9,14 @@ class Person
 {
 public:
 	Person(); // Default Constructor
-	Person(int); //Overloaded Constructor
+	Person(string, int); //Overloaded Constructor
 
 	//Accessor Function (Getter)
-	int getName() const; // Should get name
+	string getName() const; // Should get name
 	int getAge() const;
 
 	//Mutator Function (Setter)
-	void setName(int); // Should return name
+	void setName(string); // Should return name
 	void setAge(int);
 
 	//Destructor
@@ -25,10 +25,10 @@ public:
 	void printInfo() const;
 
 	//Get Age
-	double getAge(int) const;
+	int getAge(int) const;
 
 private:
-	int name;
+	string name;
 	int age;
 
 
