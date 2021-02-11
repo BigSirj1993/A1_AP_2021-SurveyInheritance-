@@ -6,33 +6,46 @@ using namespace std;
 NonGamingStudent::NonGamingStudent()
 {
 
-	streamingService = 0;
+	streamingService = " ";
 	hoursOfNonGameFun = 0;
 }
 
 
 //Overloaded Constructor
-NonGamingStudent::NonGamingStudent(int newStreamingService, int newHoursOfNonGameFun)
+NonGamingStudent::NonGamingStudent(string newStreamingService, int newHoursOfNonGameFun)
 {
 	streamingService = newStreamingService;
 	hoursOfNonGameFun = newHoursOfNonGameFun;
 }
 
-
-//Accessor Function
-int NonGamingStudent::getStreamingService() const
+void NonGamingStudent::createRandomStudent()
 {
-	return streamingService;
+	setName("");
+	setAge(18 + rand()% 27);
+	setCollege("");
+	setProgramName("");
+	setCurrentSemester(1 + rand() % 6);
+	int randomService = rand() % 2;
+	switch (randomService)
+	{
+	case 0:
+		setStreamingService("Funimation");
+		break;
+	case 1:
+		setStreamingService("Disney");
+		break;
+	
+	}
+	//createRandomStudent();
+	//setStreamingService("Funimation");
+	//setHoursOfNonGameFun(5);
 }
 
-int NonGamingStudent::getHoursOfNonGameFun() const
-{
-	return hoursOfNonGameFun;
-}
+
 
 
 //Mutator Function
-void NonGamingStudent::setStreamingService(int newStreamingService)
+void NonGamingStudent::setStreamingService(string newStreamingService)
 {
 	streamingService = newStreamingService;
 }
@@ -52,7 +65,7 @@ NonGamingStudent::~NonGamingStudent()
 }
 
 
-int NonGamingStudent::getStreamingService() const
+string NonGamingStudent::getStreamingService() const
 {
 	return streamingService;
 }
