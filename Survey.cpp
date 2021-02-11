@@ -81,16 +81,16 @@ void Survey::process()
 	{
 		mostPreferedService = "Its a tie";
 	}
-	cout << numberOfNonGamingStudents << endl;
-	cout << numberOfGamingStudents << endl;
-	cout << totalNumberOfGamingHours << endl;
-	cout << averageNumberOfGamingHours << endl;
-	cout << totalNumberOfNonGamingHours << endl;
-	cout << averageNumberOfNonGamingHours << endl;
-	cout << totalAgeOfGamingStudents << endl;
-	cout << totalAgeOfNonGamingStudents << endl;
-	cout << mostPreferedDevice << endl;
-	cout << mostPreferedService << endl;
+	cout << "Number of Non Gaming Students: " << numberOfNonGamingStudents << endl;
+	cout << "Number of Gaming Students: " << numberOfGamingStudents << endl;
+	cout << "Total Number of Non Gaming Hours: " << totalNumberOfNonGamingHours << endl;
+	cout << "Total Number of Gaming Hours: " << totalNumberOfGamingHours << endl;
+	cout << "Average Number of Gaming Hours: " << averageNumberOfGamingHours << endl;
+	cout << "Average Number of Non Gaming Hours: " << averageNumberOfNonGamingHours << endl;
+	cout << "Total Age of Gaming Students: " << totalAgeOfGamingStudents << endl;
+	cout << "Total Age of Non Gaming Students: " << totalAgeOfNonGamingStudents << endl;
+	cout << "Most Prefered Gaming Device: " << mostPreferedDevice << endl;
+	cout << "Most Prefered Streaming Service: " <<mostPreferedService << endl;
 	
 }
 
