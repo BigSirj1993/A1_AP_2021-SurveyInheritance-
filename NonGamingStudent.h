@@ -12,20 +12,17 @@ public:
 	// Default Constructor
 	NonGamingStudent();
 
-	NonGamingStudent(int streamingService, int hoursOfNonGameFun);
-
 	//Overloaded Constructor
-	NonGamingStudent(int, int);
+	NonGamingStudent(string streamingService, int hoursOfNonGameFun);
+
+	virtual void createRandomStudent();
 
 
-	//Accessor Function
-	int getStreamingService() const;
-	int getHoursOfNonGameFun() const;
-
-
+	
+	
 
 	//Mutator Function
-	void setStreamingService(int);
+	void setStreamingService(string);
 	void setHoursOfNonGameFun(int);
 	
 
@@ -33,7 +30,7 @@ public:
 	~NonGamingStudent();
 
 
-	int getStreamingService() const; // Should Return College
+	string getStreamingService() const; // Should Return Streaming Service
 	int getHoursOfNonGameFun() const; // Should Return Program Name
 	
 
@@ -42,13 +39,10 @@ public:
 private:
 	//Member Variables
 	
-	int streamingService;
+	string streamingService;
 	int hoursOfNonGameFun;
 
 };
 
 
 
-
-
-#endif // !NON_GAMING_STUDENT_H_
