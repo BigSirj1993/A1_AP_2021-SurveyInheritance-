@@ -13,19 +13,29 @@ class Survey
 public:
 	//Defualt Constructor
 	Survey();
-	Student studentArray[500];
+	Student* studentArray[500];
 	
 
-
+	int totalAgeOfGamingStudents;
+	int totalAgeOfNonGamingStudents;
 	int numberOfNonGamingStudents;
 	int numberOfGamingStudents;
 	int totalNumberOfGamingHours;
+	int totalNumberOfNonGamingHours;
+	int averageNumberOfNonGamingHours;
 	int averageNumberOfGamingHours;
+	string mostPreferedDevice;
 	string mostPreferedService;
 	
 	void process();
-	void addStudent(int _AddStudent);
-	
+	void addStudent(int _AddStudent, Student* newStudent);
+	//void addStudent(Student*);
 	
 
 };
+
+
+
+
+#endif // _SURVEY_H_
+
