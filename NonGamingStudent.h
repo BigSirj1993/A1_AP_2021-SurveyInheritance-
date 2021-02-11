@@ -46,3 +46,8 @@ private:
 
 
 
+
+
+#endif // !NON_GAMING_STUDENT_H_
+
+
