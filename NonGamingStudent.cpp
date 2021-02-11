@@ -5,15 +5,16 @@ using namespace std;
 
 NonGamingStudent::NonGamingStudent()
 {
-
-	streamingService = " ";
-	hoursOfNonGameFun = 0;
+	setIsNotGamingStudent(true);
+	setStreamingService("");
+	setHoursOfNonGameFun(24);
 }
 
 
 //Overloaded Constructor
 NonGamingStudent::NonGamingStudent(string newStreamingService, int newHoursOfNonGameFun)
 {
+	setIsNotGamingStudent(true);
 	streamingService = newStreamingService;
 	hoursOfNonGameFun = newHoursOfNonGameFun;
 }
@@ -38,7 +39,7 @@ void NonGamingStudent::createRandomStudent()
 	}
 	//createRandomStudent();
 	//setStreamingService("Funimation");
-	//setHoursOfNonGameFun(5);
+	setHoursOfNonGameFun(30 + rand () % 60);
 }
 
 
