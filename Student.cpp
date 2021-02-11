@@ -97,12 +97,3 @@ bool Student::getIsNotGamingStudent()
 }
 
 
-
-void Student::printInfo() const
-{
-	cout << "Name: " << getName() << endl;
-	cout << "Age: " << getAge() << endl;
-	cout << "Program Name: " << getProgramName() << endl;
-	cout << "Current Semester: " << getCurrentSemester() << endl;
-}
-
