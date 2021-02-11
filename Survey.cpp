@@ -21,13 +21,13 @@ Survey::Survey()
 
 };
 
-void Survey::process() 
+void Survey::process(int populateSurvey) 
 {
 	int numberOfStudentWhoPlayXbox = 0;
 	int numberOfStudentWhoPlayPlayStation = 0;
 	int numberOfStudentWhoWatchNexflix = 0;
 	int numberOfStudentWhoWatchFunimation = 0;
-	for (int i = 0;i < 500; i++) // the for loop takes one variable [i] starts at 0, then goes to 499
+	for (int i = 0;i < populateSurvey; i++) // the for loop takes one variable [i] starts at 0, then goes to 499
 	{
 		//studentArray[i]->printInfo();
 		if (studentArray[i]->getIsGamingStudent())
@@ -50,7 +50,18 @@ void Survey::process()
 			numberOfNonGamingStudents++;
 			totalNumberOfNonGamingHours += static_cast<NonGamingStudent*>(studentArray[i])->getHoursOfNonGameFun();
 			string streamingService = static_cast<NonGamingStudent*>(studentArray[i])->getStreamingService();
+			if (streamingService == "Netflix")
+			{
+				numberOfStudentWhoWatchNexflix++;
+			}
+			else if (streamingService == "Funimation")
+			{
+				numberOfStudentWhoWatchFunimation++;
+			}
+
 		}
+		
+
 
 	}
 	if(numberOfNonGamingStudents != 0)
@@ -65,10 +76,10 @@ void Survey::process()
 	{
 		mostPreferedDevice = "Xbox";
 	}
-	else
+	/*else
 	{
 		mostPreferedDevice = "It's a tie";
-	}
+	}*/
 	if (numberOfStudentWhoWatchNexflix > numberOfStudentWhoWatchFunimation)
 	{
 		mostPreferedService = "Nextflix";
@@ -77,18 +88,16 @@ void Survey::process()
 	{
 		mostPreferedService = "Funimation";
 	}
-	else
+	/*else
 	{
 		mostPreferedService = "Its a tie";
-	}
+	}*/
 	cout << "Number of Non Gaming Students: " << numberOfNonGamingStudents << endl;
 	cout << "Number of Gaming Students: " << numberOfGamingStudents << endl;
 	cout << "Total Number of Non Gaming Hours: " << totalNumberOfNonGamingHours << endl;
 	cout << "Total Number of Gaming Hours: " << totalNumberOfGamingHours << endl;
 	cout << "Average Number of Gaming Hours: " << averageNumberOfGamingHours << endl;
 	cout << "Average Number of Non Gaming Hours: " << averageNumberOfNonGamingHours << endl;
-	cout << "Total Age of Gaming Students: " << totalAgeOfGamingStudents << endl;
-	cout << "Total Age of Non Gaming Students: " << totalAgeOfNonGamingStudents << endl;
 	cout << "Most Prefered Gaming Device: " << mostPreferedDevice << endl;
 	cout << "Most Prefered Streaming Service: " <<mostPreferedService << endl;
 	
@@ -105,3 +114,4 @@ void Survey::addStudent(int _AddStudent, Student* newStudent)
 {
 	studentArray[_AddStudent] = newStudent;
 }
+
