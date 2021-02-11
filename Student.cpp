@@ -22,7 +22,7 @@ void Student::createRandomStudent()
 
 
 //Overloaded Constructor
-Student::Student(int newCollege, int newprogramName, int newcurrentSemester)
+Student::Student(string newCollege, string newprogramName, int newcurrentSemester)
 {
 	college = newCollege;
 	programName = newprogramName;
@@ -55,7 +55,7 @@ void Student::setCollege(string newCollege)
 
 void Student::setProgramName(string newProgramName)
 {
-	college = newProgramName;
+	programName = newProgramName;
 }
 
 void Student::setCurrentSemester(int newcurrentSemester)
@@ -66,11 +66,13 @@ void Student::setCurrentSemester(int newcurrentSemester)
 void Student::setIsGamingStudent(bool nIsGamingStudent)
 {
 	isGamingStudent = nIsGamingStudent;
+	isNotGamingStudent = !isGamingStudent;
 }
 
 void Student::setIsNotGamingStudent(bool nIsNotGamingStudent)
 {
 	isNotGamingStudent = nIsNotGamingStudent;
+	isGamingStudent = !isNotGamingStudent;
 }
 
 
@@ -82,24 +84,25 @@ Student::~Student()
 
 bool Student::getIsGamingStudent()
 {
-	if(isGamingStudent == '1')
-	return true;
+	//if(isGamingStudent == true)
+	//return true;
+	return isGamingStudent;
 }
 
 bool Student::getIsNotGamingStudent()
 {
-	if(isNotGamingStudent == '0')
-	return false;
+	//if(isNotGamingStudent == true)
+	//return true;
+	return isNotGamingStudent;
 }
 
 
 
 void Student::printInfo() const
 {
-	cout << endl << "Name: " << getName() << endl;
-	cout << endl << "Age: " << getAge() << endl;
-	cout << endl << "Program Name: " << getProgramName() << endl;
-	cout << endl << "Current Semester: " << getCurrentSemester() << endl;
+	cout << "Name: " << getName() << endl;
+	cout << "Age: " << getAge() << endl;
+	cout << "Program Name: " << getProgramName() << endl;
+	cout << "Current Semester: " << getCurrentSemester() << endl;
 }
-
 
