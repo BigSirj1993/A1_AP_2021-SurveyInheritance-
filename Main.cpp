@@ -47,15 +47,39 @@ int main()
 
 	for (int i = 0;i < 500; i++)
 	{
-		mySurvey.addStudent(i);
+		int choice;
+		//mySurvey.addStudent(i);
+		choice = rand() % 2;
+		if (choice == 0)
+		{
+			GamingStudent* Selection = new GamingStudent;
+			Selection->createRandomStudent();
+			mySurvey.addStudent(i, Selection);
+			
+
+		}
+		else if(choice == 1)
+		{
+			NonGamingStudent* Selection = new NonGamingStudent;
+			Selection->createRandomStudent();
+			mySurvey.addStudent(i, Selection);
+			
+		}
+		
+
 	}
 
-	for (int i = 0; i < 500; i++)
+	mySurvey.process();
+
+	/*for (int i = 0; i < 500; i++)
 	{
+		cout << "Select if your a gaming student or a non gaming student: " << endl;
+		
 		//mySurvey.studentArray[i].getIsGamingStudent(); 
 		//mySurvey.studentArray[i].getIsNotGamingStudent();
 		if (mySurvey.studentArray[i].getIsGamingStudent())
 		{
+			static_cast<GamingStudent*>(&studentArray[i])->setHoursOfGameFun(srand);
 			cout << "Thank you for taking my quiz, Gamer." << endl;
 		}
 		else if(mySurvey.studentArray[i].getIsNotGamingStudent())
@@ -63,7 +87,7 @@ int main()
 			cout << "Thank you for taking my quiz, Non Gamer." << endl;
 		}
 
-	}
+	}*/
 
 
 	system("pause");
