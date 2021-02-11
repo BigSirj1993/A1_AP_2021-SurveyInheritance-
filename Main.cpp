@@ -1,10 +1,13 @@
+//#include "Person.h"
 #include "GamingStudent.h"
 #include "NonGamingStudent.h"
 #include "Survey.h"
 #include "Student.h"
 #include "Person.h"
 #include <iostream>
-
+#include <stdio.h>      
+#include <stdlib.h>     
+#include <time.h>       
 
 using namespace std;
 
@@ -12,6 +15,15 @@ using namespace std;
 
 int main()
 {
+	int populateSurvey;
+	cout << "Thanks and Welcome to the Survey! " << endl;
+	cout << "Please make a selection: " << endl;
+	cout << "Press 0 if you're a gamer. " << endl;
+	cout << "Press 1 if you're a non gamer. " << endl;
+	
+	cin >> populateSurvey;
+
+	srand(time(NULL));
 	// Creating our classes
 	Survey mySurvey;
 	Student myStudent;
@@ -45,7 +57,7 @@ int main()
 
 
 
-	for (int i = 0;i < 500; i++)
+	for (int i = 0;i < populateSurvey; i++)
 	{
 		int choice;
 		//mySurvey.addStudent(i);
@@ -69,7 +81,7 @@ int main()
 
 	}
 
-	mySurvey.process();
+	mySurvey.process(populateSurvey);
 
 	/*for (int i = 0; i < 500; i++)
 	{
