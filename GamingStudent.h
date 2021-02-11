@@ -13,20 +13,16 @@ public:
 	// Default Constructor
 	GamingStudent();
 
-	GamingStudent(int gamingDevice, int hoursOfGameFun);
+	GamingStudent(string gamingDevice, int hoursOfGameFun);
+
+	virtual void createRandomStudent();
 
 	//Overloaded Constructor
-	GamingStudent(int, int);
-
-
-	//Accessor Function
-	int getGamingDevice() const;
-	int getHoursOfGameFun() const;
-
+	GamingStudent(int,int);
 
 
 	//Mutator Function
-	void setGamingDevice(int);
+	void setGamingDevice(string);
 	void setHoursOfGameFun(int);
 
 
@@ -34,16 +30,16 @@ public:
 	~GamingStudent();
 
 
-	int getGamingDevice() const; // Should Return College
+	string getGamingDevice() const; // Should Return College
 	int getHoursOfGameFun() const; // Should Return Program Name
 
 
-	void printInfo() const; // Should print info of College, Program Name And Semester
+	virtual void printInfo() const; // Should print info of College, Program Name And Semester
 
 private:
 	//Member Variables
 
-	int gamingDevice;
+	string gamingDevice;
 	int hoursOfGameFun;
 
 };
