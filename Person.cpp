@@ -47,3 +47,15 @@ Person::~Person()
 {
 
 }
+
+
+
+
+
+
+
+void Person::printInfo() const
+{
+	cout  << "Name: " << getName() << endl;
+	cout  << "Age: " << getAge() << endl;
+}
