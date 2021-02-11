@@ -27,7 +27,7 @@ public:
 	string mostPreferedDevice;
 	string mostPreferedService;
 	
-	void process();
+	void process(int populateSurvey);
 	void addStudent(int _AddStudent, Student* newStudent);
 	//void addStudent(Student*);
 	
